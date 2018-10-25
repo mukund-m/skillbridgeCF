@@ -1,0 +1,59 @@
+[debug] [2018-10-25T15:15:29.345Z] ----------------------------------------------------------------------
+[debug] [2018-10-25T15:15:29.350Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\upesh\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-10-25T15:15:29.350Z] CLI Version:   4.2.1
+[debug] [2018-10-25T15:15:29.350Z] Platform:      win32
+[debug] [2018-10-25T15:15:29.350Z] Node Version:  v8.11.4
+[debug] [2018-10-25T15:15:29.351Z] Time:          Thu Oct 25 2018 20:45:29 GMT+0530 (India Standard Time)
+[debug] [2018-10-25T15:15:29.351Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-25T15:15:29.377Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-25T15:15:29.378Z] > authorizing via signed-in user
+[debug] [2018-10-25T15:15:29.384Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/skillbridge-training  
+ 
+[debug] [2018-10-25T15:15:30.920Z] <<< HTTP RESPONSE 200
+[warn] !  functions: package.json indicates an outdated version of firebase-functions.
+ Please upgrade using npm install --save firebase-functions@latest in your functions directory.
+[info] 
+[info] === Deploying to 'skillbridge-training'...
+[info] 
+[info] i  deploying functions
+[info] Running command: npm --prefix ./functions run lint
+[info] Running command: npm --prefix ./functions run build
+[info] +  functions: Finished running predeploy script.
+[debug] [2018-10-25T15:15:42.101Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "./node_modules/.bin/tslint -p tslint.json",
+    "build": "./node_modules/.bin/tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "async": "^2.6.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.1",
+    "express": "^4.14.1",
+    "firebase-admin": "^5.12.1",
+    "firebase-functions": "^0.8.1",
+    "moment": "^2.22.1",
+    "moment-timezone": "^0.5.17",
+    "node-rest-client": "^3.1.0",
+    "nodemailer": "^4.6.8",
+    "sendgrid": "^5.2.3",
+    "xero-node": "^2.20.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-10-25T15:15:42.103Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/skillbridge-training?view=CONSUMER_VIEW  
+ 
+[debug] [2018-10-25T15:15:42.103Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/skillbridge-training?view=CONSUMER_VIEW  
+ 
